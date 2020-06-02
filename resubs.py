@@ -13,7 +13,6 @@ import socket
 
 parser = argparse.ArgumentParser(description='Resubs Tool')
 
-parser.add_argument("-h", "--help", help="Show this help message")
 parser.add_argument("-f", "--file", help="A file which contain subdomains ")
 parser.add_argument("-w", "--wordlist", help="A file which contain certain words")
 parser.add_argument("-o", "--output", help="Where you want to save the results")
