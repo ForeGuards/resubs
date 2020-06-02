@@ -58,7 +58,11 @@ def logo():
 ██      ██   ██ ██           ██ ██ ██  ██  ██     ██   ██ ██           ██ ██    ██ ██   ██      ██ 
  ██████ ██   ██ ███████ ███████ ██ ██      ██     ██   ██ ███████ ███████  ██████  ██████  ███████ 
                                                                                                    
-                                                                                                                                                                                               
+                                                      author     = CAESIM
+                                                      copyright  = Copyright 2020, CAESIM RESUBS
+                                                      version    = 1.0
+                                                      email      = caesim@caesim.com
+                                                      status     = Production                                                                                                                                                                                         
 ===================================================================================================
 
     """ + white)
@@ -108,7 +112,7 @@ def main():
         nslookup()
     else:
         logo()
-        print(red + "[!] Type python3 resubs.py -h for help.")
+        print(red + "[!] Type python3 resubs.py -h for help [!]")
 
 
 # FUNCTIONS CALL
