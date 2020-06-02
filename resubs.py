@@ -79,8 +79,8 @@ def resubs():
 
 
 def nslookup():
-    f = open(file, "w")
-    with open(save, "r") as fp:
+    f = open(save, "w")
+    with open(file, "r") as fp:
         line = fp.readline()
 
         while line:
