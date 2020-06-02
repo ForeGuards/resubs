@@ -23,4 +23,17 @@ sudo pip3 install -r requirements.txt
 ```
 python3 resubs.py -h
 ```
+```
+usage: resubs.py [-h] [-f FILE] [-w WORDLIST] [-o OUTPUT] [-s SAVE]
 
+Resubs Tool
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  A file which contain subdomains
+  -w WORDLIST, --wordlist WORDLIST
+                        A file which contain certain words
+  -o OUTPUT, --output OUTPUT
+                        Where you want to save the resu`lts
+  -s SAVE, --save SAVE  Where you want to save the nslookup results
+``
