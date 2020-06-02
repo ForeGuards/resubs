@@ -6,6 +6,7 @@
 import argparse
 import os
 import socket
+import time
 
 # --------------
 
@@ -80,9 +81,8 @@ def resubs():
 
 
 def nslookup():
-
     if file is not None and wordlist is not None and output is not None and save is not None:
-        f = open(save, "w")
+        fw = open(save, "w")
         with open(output, "r") as fp:
             line = fp.readline()
 
@@ -91,7 +91,7 @@ def nslookup():
                     clean_line = line.strip()
                     addr1 = socket.gethostbyname(clean_line)
                     print("valid url : " + addr1 + " from " + clean_line)
-                    f.write(clean_line + "\n")
+                    fw.write(clean_line + "\n")
 
                 except:
                     clean_line = line.strip()
@@ -99,7 +99,7 @@ def nslookup():
 
                 line = fp.readline()
 
-        f.close()
+        fw.close()
 
         print("")
         print(green + """"### All Done! You will find your report in your chosen directory ###""" + white)
