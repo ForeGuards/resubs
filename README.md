@@ -17,3 +17,10 @@ cd resubs/
 ```
 sudo pip3 install -r requirements.txt
 ```
+
+# Usage:
+
+```
+python3 resubs.py -h
+```
+
