@@ -6,6 +6,7 @@
 import argparse
 import os
 import socket
+
 # --------------
 
 # GLOBAL FUNCTIONS
@@ -79,27 +80,51 @@ def resubs():
 
 
 def nslookup():
-    f = open(save, "w")
-    with open(file, "r") as fp:
-        line = fp.readline()
 
-        while line:
-            try:
-                clean_line = line.strip()
-                addr1 = socket.gethostbyname(clean_line)
-                print("valid url : " + addr1 + " from " + clean_line)
-                f.write(clean_line + "\n")
-
-            except:
-                clean_line = line.strip()
-                print(clean_line + " is not valid")
-
+    if file is not None and wordlist is not None and output is not None and save is not None:
+        f = open(save, "w")
+        with open(output, "r") as fp:
             line = fp.readline()
 
-    f.close()
+            while line:
+                try:
+                    clean_line = line.strip()
+                    addr1 = socket.gethostbyname(clean_line)
+                    print("valid url : " + addr1 + " from " + clean_line)
+                    f.write(clean_line + "\n")
 
-    print("")
-    print(green + """"### All Done! You will find your report in your chosen directory ###""" + white)
+                except:
+                    clean_line = line.strip()
+                    print(clean_line + " is not valid")
+
+                line = fp.readline()
+
+        f.close()
+
+        print("")
+        print(green + """"### All Done! You will find your report in your chosen directory ###""" + white)
+    else:
+        f = open(save, "w")
+        with open(file, "r") as fp:
+            line = fp.readline()
+
+            while line:
+                try:
+                    clean_line = line.strip()
+                    addr1 = socket.gethostbyname(clean_line)
+                    print("valid url : " + addr1 + " from " + clean_line)
+                    f.write(clean_line + "\n")
+
+                except:
+                    clean_line = line.strip()
+                    print(clean_line + " is not valid")
+
+                line = fp.readline()
+
+        f.close()
+
+        print("")
+        print(green + """"### All Done! You will find your report in your chosen directory ###""" + white)
 
 
 def main():
