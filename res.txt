@@ -1,2 +1,0 @@
-prod.redbull.com
-test.redbull.com
