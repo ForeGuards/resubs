@@ -6,7 +6,6 @@
 import argparse
 import os
 import socket
-import time
 
 # --------------
 
@@ -128,12 +127,12 @@ def nslookup():
 
 
 def main():
-    if file is not None and wordlist is not None and output is not None:
+    if file is not None and wordlist is not None and output is not None and save is not None:
+        resubs()
+        nslookup()
+    elif file is not None and wordlist is not None and output is not None:
         resubs()
     elif file is not None and save is not None:
-        nslookup()
-    elif file is not None and wordlist is not None and output is not None and save is not None:
-        resubs()
         nslookup()
     else:
         logo()
