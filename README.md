@@ -7,7 +7,7 @@ as a subdomain and test it if they are reachable or not via nslookup!
 # Installation:
 
 ```
-git clone https://github.com/Ozunuclan/resubs.git
+git clone https://github.com/ca3s1m/resubs.git
 ```
 
 ```
